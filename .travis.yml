@@ -13,7 +13,7 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project multi-k8s-319322
-  - gcloud config set conpute/zone us-central1-c
+  - gcloud config set compute/zone us-central1-c
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -f ./client/Dockerfile.dev ./client
