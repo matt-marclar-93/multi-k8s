@@ -22,7 +22,8 @@ script:
   - docker build -t stephengrider/react-test -f ./client/Dockerfile.dev ./client
 
 deploy:
-  provider: 
+  provider: script
   script: bash ./deploy.sh
   on:
     branch: master
+
