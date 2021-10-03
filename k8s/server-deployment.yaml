@@ -1,10 +1,10 @@
-apiVersion: apps/v1
+apiVersion: apps/v1 #
 kind: Deployment
 metadata:
   name: server-deployment
 spec:
   replicas: 3
-  selector:
+  selector:     # selector is the name giving to the thing that gives the pods a name
     matchLabels:
       component: server
   template:

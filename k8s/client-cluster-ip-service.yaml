@@ -7,6 +7,7 @@ spec:
   selector:
     component: web
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 3000  # the port that other Depolyment's pods access this one's service
+      targetPort: 3000 # the actual port of the web services in this deployment
+      # no nodePort specs in these Cluster IP services because you can't access these from the outside
   
