@@ -15,6 +15,7 @@ before_install:
   - echo "$KUBE_CONFIG"  > ${HOME}/.kube/config
 
 script:
+  - echo "$KUBE_CONFIG"
   - kubectl get pods
 
 
