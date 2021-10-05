@@ -13,10 +13,9 @@ before_install:
   - sudo az aks install-cli
   - mkdir ${HOME}/.kube
   - echo "$KUBE_CONFIG" | base64 --decode > ${HOME}/.kube/config
-  - export KUBECONFIG=$HOME/.kube/config
+  #- export KUBECONFIG=$HOME/.kube/config
 
 script:
-  - echo "$KUBE_CONFIG"
   - kubectl get pods
 
 
